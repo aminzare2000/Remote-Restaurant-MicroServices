@@ -1,0 +1,82 @@
+{
+	"info": {
+		"_postman_id": "1b4e5362-9c86-4de7-bbe2-3c1f9610bdd4",
+		"name": "Ingredient",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://localhost:5029/api/v1/Ingredient",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5029/api/v1/Ingredient",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5029",
+					"path": [
+						"api",
+						"v1",
+						"Ingredient"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:5029/api/v1/Ingredient/602d2149e773f2a3990b47f7",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5029/api/v1/Ingredient/602d2149e773f2a3990b47f7",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5029",
+					"path": [
+						"api",
+						"v1",
+						"Ingredient",
+						"602d2149e773f2a3990b47f7"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:5029/api/v1/Ingredient",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": \"602d2149e773f2a3990b47f5\",\r\n    \"name\": \"carrots\",\r\n    \"description\": \"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut, tenetur natus doloremque laborum quos iste ipsum rerum obcaecati impedit odit illo dolorum ab tempora nihil dicta earum fugiat. Temporibus, voluptatibus. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut, tenetur natus doloremque laborum quos iste ipsum rerum obcaecati impedit odit illo dolorum ab tempora nihil dicta earum fugiat. Temporibus, voluptatibus.\",\r\n    \"price\": 190,\r\n    \"categoryName\": \"Vegetables\",\r\n    \"imageFile\": \"carrots-1.png\"\r\n  }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5029/api/v1/Ingredient",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5029",
+					"path": [
+						"api",
+						"v1",
+						"Ingredient"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

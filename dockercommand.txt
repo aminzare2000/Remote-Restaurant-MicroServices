@@ -1,0 +1,4 @@
+docker run --name my_mongo -d -p 127.0.0.1:27017:27017 mongo
+"ConnectionString": "mongodb://127.0.0.1:27017",
+
+ docker run -d --link my_mongo:mongo -p 8081:8081 --name my_mongo_express -e ME_CONFIG_MONGODB_URL="mongodb://172.17.0.2:27017" mongo-express

@@ -1,0 +1,36 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31919.166
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "Services", "{817780D5-CD61-42C2-8B7C-100DC37291ED}"
+	ProjectSection(SolutionItems) = preProject
+		Services\Ingredient\docker-compose.yml = Services\Ingredient\docker-compose.yml
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Ingredient", "Ingredient", "{4F248A9C-D050-4E22-B1B4-A6383BD16C26}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ingredient.API", "Services\Ingredient\Ingredient.API\Ingredient.API.csproj", "{213B7B78-3E09-4A09-8272-BB31592EAF6F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{213B7B78-3E09-4A09-8272-BB31592EAF6F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{213B7B78-3E09-4A09-8272-BB31592EAF6F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{213B7B78-3E09-4A09-8272-BB31592EAF6F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{213B7B78-3E09-4A09-8272-BB31592EAF6F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{4F248A9C-D050-4E22-B1B4-A6383BD16C26} = {817780D5-CD61-42C2-8B7C-100DC37291ED}
+		{213B7B78-3E09-4A09-8272-BB31592EAF6F} = {4F248A9C-D050-4E22-B1B4-A6383BD16C26}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {BD5278CB-706F-41C7-9C31-7172EE616809}
+	EndGlobalSection
+EndGlobal
