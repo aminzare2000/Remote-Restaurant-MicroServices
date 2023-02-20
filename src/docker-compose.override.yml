@@ -1,0 +1,21 @@
+# https://towardsdatascience.com/the-complete-guide-to-docker-volumes-1a06051d2cce
+version: '3.4'
+
+services:
+  IngredientDb:
+    container_name: IngredientDb
+    restart: always
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongo_data:E:\data\db:/data/db
+
+
+  ingredient.api:
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - "DatabaseSettings:ConnectionString=mongodb://IngredientDb:27017"
+    depends_on:
+      - IngredientDb
+    ports:
+      - "8000:80"

@@ -1,0 +1,16 @@
+# https://towardsdatascience.com/the-complete-guide-to-docker-volumes-1a06051d2cce
+version: '3.4'
+
+services:
+  IngredientDb:
+    image: mongo
+
+
+  ingredient.api:
+    image: ${DOCKER_REGISTRY-}ingredientapi
+    build:
+      context: .
+      dockerfile: Services/Ingredient/Ingredient.API/Dockerfile
+
+volumes:
+  mongo_data:

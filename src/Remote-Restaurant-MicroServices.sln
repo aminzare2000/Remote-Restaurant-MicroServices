@@ -12,6 +12,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Ingredient", "Ingredient", 
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ingredient.API", "Services\Ingredient\Ingredient.API\Ingredient.API.csproj", "{213B7B78-3E09-4A09-8272-BB31592EAF6F}"
 EndProject
+Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{DBF2BA0D-932D-4891-8DF0-B995A175CF85}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -22,6 +24,10 @@ Global
 		{213B7B78-3E09-4A09-8272-BB31592EAF6F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{213B7B78-3E09-4A09-8272-BB31592EAF6F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{213B7B78-3E09-4A09-8272-BB31592EAF6F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DBF2BA0D-932D-4891-8DF0-B995A175CF85}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DBF2BA0D-932D-4891-8DF0-B995A175CF85}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DBF2BA0D-932D-4891-8DF0-B995A175CF85}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DBF2BA0D-932D-4891-8DF0-B995A175CF85}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
