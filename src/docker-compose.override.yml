@@ -8,7 +8,7 @@ services:
     ports:
       - "27017:27017"
     volumes:
-      - mongo_data:E:\data\db:/data/db
+      - mongo_data:/data/db
 
 
   ingredient.api:
@@ -19,3 +19,11 @@ services:
       - IngredientDb
     ports:
       - "8000:80"
+   
+  mongo_express:
+     environment:
+      - ME_CONFIG_MONGODB_SERVER=IngredientDb
+     ports:
+      - "8081:8081"
+     depends_on:
+      - IngredientDb

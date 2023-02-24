@@ -12,5 +12,8 @@ services:
       context: .
       dockerfile: Services/Ingredient/Ingredient.API/Dockerfile
 
+  mongo_express:
+     image: mongo-express
+
 volumes:
   mongo_data:

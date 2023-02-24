@@ -1,4 +1,27 @@
 docker run --name my_mongo -v E:\data\db:/data/db -v E:\data\config:/data/configdb -d -p 127.0.0.1:27017:27017 mongo
 "ConnectionString": "mongodb://127.0.0.1:27017",
 
-docker run -d --link my_mongo:mongo -p 8081:8081 --name my_mongo_express -e ME_CONFIG_MONGODB_URL="mongodb://172.17.0.2:27017" mongo-express
+docker run -d --link my_mongo:mongo -p 8081:8081 --name my_mongo_express -e ME_CONFIG_MONGODB_URL="mongodb://172.18.0.2:27017" mongo-express
+
+
+
+
+
+	docker-compose -f docker-compose.yml -f docker-compose.override.yml up --build
+	or
+	docker-compose -f docker-compose.yml -f docker-compose.override.yml up -d
+	docker-compose -f docker-compose.yml -f docker-compose.override.yml down
+
+
+List all containers (only IDs)
+docker ps -aq
+Stop all running containers
+docker stop $(docker ps -aq)
+Remove all containers
+docker rm $(docker ps -aq)
+
+
+
+I added new command at the end of Dockerfile :
+
+RUN dotnet Ingredient.API.dll Start-Process -FilePath "powershell" -ArgumentList $args -NoNewWindow

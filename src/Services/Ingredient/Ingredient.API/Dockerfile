@@ -19,3 +19,4 @@ FROM base AS final
 WORKDIR /app
 COPY --from=publish /app/publish .
 ENTRYPOINT ["dotnet", "Ingredient.API.dll"]
+RUN dotnet Ingredient.API.dll Start-Process -FilePath "powershell" -ArgumentList $args -NoNewWindow
