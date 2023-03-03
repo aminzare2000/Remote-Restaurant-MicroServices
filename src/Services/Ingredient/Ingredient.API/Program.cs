@@ -16,7 +16,7 @@ builder.Services.Configure<IngredientDatabaseSettings>(builder.Configuration.Get
 builder.Services.AddControllers();
 
 builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen();
+//builder.Services.AddSwaggerGen();
 builder.Services.AddScoped<IIngredientContext, IngredientContext>();
 builder.Services.AddScoped<IIngredientRepository, IngredientRepository>();
 
