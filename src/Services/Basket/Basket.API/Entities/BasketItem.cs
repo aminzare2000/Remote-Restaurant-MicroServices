@@ -5,6 +5,6 @@
         public decimal Price { get; set; }
         public decimal Weight { get; set; }
         public string IngredientName { get; set; }
-        public int IngredientId { get; set; }
+        public string IngredientId { get; set; }
     }
 }

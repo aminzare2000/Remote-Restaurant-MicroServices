@@ -1,17 +1,17 @@
 ﻿namespace Basket.API.Entities
 {
-    public class Basket
+    public class BasketBuy
     {
         public string Username { get; set; }
         
         public List<BasketItem> Items { get; set;} = new List<BasketItem>();
 
-        public Basket()
+        public BasketBuy()
         {
 
         }
 
-        public Basket(string username)
+        public BasketBuy(string username)
         {
             Username = username;
         }
