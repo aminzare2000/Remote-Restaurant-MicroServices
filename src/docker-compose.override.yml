@@ -6,10 +6,15 @@ services:
     container_name: IngredientDb
     restart: always
     ports:
+      - "6379:6379"
+
+  basketdb:
+    container_name: basketdb
+    restart: always
+    ports:
       - "27017:27017"
     volumes:
       - mongo_data:/data/db
-
 
   ingredient.api:
     environment:
@@ -27,3 +32,13 @@ services:
       - "8081:8081"
      depends_on:
       - IngredientDb
+
+  basket.api:
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - "CacheSettings:ConnectionString=basketdb:6379"
+    depends_on:
+      - basketdb
+    ports:
+      - "8001:80"
+
